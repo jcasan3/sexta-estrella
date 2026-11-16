@@ -3,5 +3,5 @@ build/
 frames/
 out/
 __pycache__/
-*.mp4
+out/*.mp4
 *.wav
