@@ -23,5 +23,3 @@ Canal de Shorts sobre GTA 6 en español neutro/latino. YouTube: @laasextaestrell
 El plan da 150 al mes. Presupuesto: unos 25 por semana (búsquedas a 5 cada una).
 
 
-## Pendientes de publicar (ya montados)
-05_online, 06_mapa, 07_personajes, 08_plataformas, 09_novedades, 10_analisis
