@@ -5,7 +5,7 @@ kind : tipo de gráfico; el resto de campos depende del tipo.
 En los titulares, *asteriscos* = palabra resaltada.
 """
 CHANNEL = "SEXTA ESTRELLA"
-HANDLE = "@SextaEstrella"
+HANDLE = "@laasextaestrella"
 
 CTA = dict(say="Síguenos: el jueves subimos todo lo del lanzamiento.", kind="cta")
 CTA2 = dict(say="Síguenos: cada día, un dato nuevo de GTA 6.", kind="cta")
