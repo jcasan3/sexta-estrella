@@ -23,3 +23,6 @@ Canal de Shorts sobre GTA 6 en español neutro/latino. YouTube: @laasextaestrell
 El plan da 150 al mes. Presupuesto: unos 25 por semana (búsquedas a 5 cada una).
 
 
+
+## Vídeo extra por noticia (comprobación diaria)
+Cada día se revisan las noticias de GTA 6 (solo búsqueda web, sin gastar créditos de vidIQ). Si hay algo gordo (parche importante, récord de ventas, anuncio de Rockstar sobre Online o PC, secreto viral), se hace un vídeo extra y se programa para ese mismo día a las 19:00 de México, con el "sí" del dueño. Máximo un extra al día. Si no hay nada relevante, no se hace nada y no se avisa. Antes de elegir el tema, revisar data/published.json para no repetirlo.
