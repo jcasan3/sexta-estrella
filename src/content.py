@@ -8,6 +8,7 @@ CHANNEL = "SEXTA ESTRELLA"
 HANDLE = "@SextaEstrella"
 
 CTA = dict(say="Síguenos: el jueves subimos todo lo del lanzamiento.", kind="cta")
+CTA2 = dict(say="Síguenos: cada día, un dato nuevo de GTA 6.", kind="cta")
 
 VIDEOS = [
  dict(
@@ -110,7 +111,7 @@ VIDEOS = [
         items=[("num","Vice City","su Miami"),("num","Cayos de Leonida","islas tropicales"),("num","Grassrivers","pantanos"),("num","Port Gellhorn","zona portuaria"),("num","Ambrosia",""),("num","Mount Kalaga","parque nacional")]),
    dict(say="¿Qué tan grande es? Rockstar no ha dado una cifra oficial.", kind="text", head="¿Tamaño? *Sin cifra oficial*", sub="Rockstar no la ha publicado"),
    dict(say="Eso de que es el doble que GTA 5 son estimaciones de fans.", kind="text", head="«El doble que GTA 5»", sub="Es una estimación de fans"),
-   CTA,
+   CTA2,
   ]),
  dict(
   id="07_personajes", pal=0,
@@ -126,7 +127,7 @@ VIDEOS = [
    dict(say="La historia: una conspiración criminal que se extiende por todo el estado.", kind="text", head="Una *conspiración* criminal", sub="por todo el estado de Leonida"),
    dict(say="Y el centro de todo es la relación entre los dos: el juego tiene un sistema de relación de pareja.", kind="big", label="EL CENTRO DE LA HISTORIA", value="LOS DOS", sub="con sistema de relación"),
    dict(say="Además, puedes alternar entre ambos mientras juegas.", kind="text", head="*Alternas* entre ambos", sub="mientras juegas"),
-   CTA,
+   CTA2,
   ]),
  dict(
   id="08_plataformas", pal=1,
@@ -160,7 +161,7 @@ VIDEOS = [
    dict(say="Cinco: la gente reacciona si caminas con armas a la vista.", kind="num", n=5, head="Armas *a la vista*", sub="La gente reacciona"),
    dict(say="Y seis: el gimnasio y lo que consumes cambian tus estadísticas.", kind="num", n=6, head="*Gimnasio* y consumibles", sub="Cambian tus estadísticas"),
    dict(say="Todo salió en el Extended Look de 26 minutos que Rockstar mostró en agosto.", kind="big", label="FUENTE: EXTENDED LOOK", value="26 MIN", sub="mostrado por Rockstar en agosto"),
-   CTA,
+   CTA2,
   ]),
  dict(
   id="10_analisis", pal=0,
