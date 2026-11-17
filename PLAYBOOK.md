@@ -13,11 +13,17 @@ Canal de Shorts sobre GTA 6 en español neutro/latino. YouTube: @laasextaestrell
 1. `./setup.sh`
 2. Rendimiento: estadísticas de los vídeos publicados con vidIQ (vistas, retención, suscriptores). Anotar en `data/learnings.md` qué temas, ganchos, títulos y horas funcionaron y cuáles no.
 3. Temas: `vidiq_keyword_research` (questions/rising, language es) más búsqueda web de noticias de la semana. Elegir 7 temas con demanda y poca competencia que no estén ya en `data/published.json`.
-4. Guiones en `src/content.py` (30-45 s; gancho en la primera frase; datos comprobados con fuente).
-5. `python3 src/audio.py <ids>` y luego `python3 src/render.py render <ids>`. Revisar fotogramas antes de dar por bueno el lote.
+4. Guiones en `src/content2.py` (estilo v2: 25-35 s, frases cortas, gancho fuerte en el primer segundo, muchas referencias concretas a GTA 6: lugares de Leonida, personajes, mecánicas; datos comprobados con fuente en data/sources.md).
+5. `python3 src/audio2.py <ids>` (voz Kokoro em_alex, efectos y música) y luego `python3 src/render2.py render <ids>`. Fondos animados disponibles: city, beach, highway, police, map. Gráficos: title, stamp, big, list, timeline, stars, num, pin, vs, cta. Revisar fotogramas antes de dar por bueno el lote. Si hace falta un fondo o gráfico nuevo, añadirlo a render2.py.
 6. Subir los MP4 a una release de GitHub (`gh release create semana-AAAA-MM-DD out/*.mp4`) e importarlos con `vidiq_video_upload` usando la URL de descarga.
 7. Crear un borrador por vídeo con `publishAt` en las mejores horas según `data/learnings.md`. Por defecto: 19:00-21:00 hora de Ciudad de México.
 8. Enviar al dueño el resumen del lote y esperar su "sí". Después, `vidiq_social_post_publish` y actualizar `data/published.json`.
+
+## Informe semanal para Vic (cada sábado)
+Tabla con cada vídeo publicado: título, fecha, vistas, likes, comentarios y, si vidIQ lo da, duración media vista y % de retención. Después: qué funcionó y qué no, qué cambia en el siguiente lote (temas, ganchos, fondos, voz, horas). Guardar el informe en data/reports/AAAA-MM-DD.md.
+
+## Mejora continua
+Cada lote debe cambiar algo medible respecto al anterior a partir de los datos (gancho, duración, fondos, ritmo, temas). Anotar en data/learnings.md la hipótesis y el resultado la semana siguiente.
 
 ## Créditos de vidIQ
 El plan da 150 al mes. Presupuesto: unos 25 por semana (búsquedas a 5 cada una).
