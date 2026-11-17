@@ -1,16 +1,91 @@
 {
-  "channel": {"id": "UC0DbF4dRYCmkdu-4p8xmp3w", "handle": "@laasextaestrella"},
+  "channel": {
+    "id": "UC0DbF4dRYCmkdu-4p8xmp3w",
+    "handle": "@laasextaestrella"
+  },
   "videos": [
-    {"id": "01_hora", "yt": "Jpfmx0yOnc4", "published": "2026-11-16", "via": "manual"},
-    {"id": "02_pc", "yt": "hf7p_X1hMNA", "published": "2026-11-16", "via": "manual"},
-    {"id": "03_ediciones", "yt": "YY01n3KYkT4", "published": "2026-11-16", "via": "manual"},
-    {"id": "04_peso", "yt": "XfDFmTGa-go", "published": "2026-11-16", "via": "vidIQ"},
-    {"id": "10_analisis", "yt": "3oIZOCbKl_g", "published": "2026-11-17T01:00Z", "via": "vidIQ"},
-    {"id": "05_online", "yt": "Cn1YLYQoV3o", "published": "2026-11-18T01:00Z", "via": "vidIQ"},
-    {"id": "08_plataformas", "yt": "iADCTxg8Nc8", "published": "2026-11-19T01:00Z", "via": "vidIQ"},
-    {"id": "09_novedades", "yt": "He6cxbepWxo", "published": "2026-11-20T01:00Z", "via": "vidIQ"},
-    {"id": "06_mapa", "yt": "tAdFZ81Ykqo", "published": "2026-11-21T01:00Z", "via": "vidIQ"},
-    {"id": "07_personajes", "yt": "efCkU5B4oYE", "published": "2026-11-22T01:00Z", "via": "vidIQ"}
+    {
+      "id": "01_hora",
+      "yt": "Jpfmx0yOnc4",
+      "published": "2026-11-16",
+      "via": "manual",
+      "style": "v1"
+    },
+    {
+      "id": "02_pc",
+      "yt": "hf7p_X1hMNA",
+      "published": "2026-11-16",
+      "via": "manual",
+      "style": "v1"
+    },
+    {
+      "id": "03_ediciones",
+      "yt": "YY01n3KYkT4",
+      "published": "2026-11-16",
+      "via": "manual",
+      "style": "v1"
+    },
+    {
+      "id": "04_peso",
+      "yt": "XfDFmTGa-go",
+      "published": "2026-11-16",
+      "via": "vidIQ",
+      "style": "v1"
+    },
+    {
+      "id": "10_analisis",
+      "yt": "3oIZOCbKl_g",
+      "published": "2026-11-17T01:00Z",
+      "via": "vidIQ",
+      "style": "v1"
+    },
+    {
+      "id": "05_online_v2",
+      "yt": "0GYGDwXIdLs",
+      "published": "2026-11-18T01:00Z",
+      "via": "vidIQ",
+      "style": "v2",
+      "replaced": "versión v1 Cn1YLYQoV3o pasada a privado"
+    },
+    {
+      "id": "08_plataformas_v2",
+      "yt": "XKVwL5oOnk4",
+      "published": "2026-11-19T01:00Z",
+      "via": "vidIQ",
+      "style": "v2",
+      "replaced": "versión v1 iADCTxg8Nc8 pasada a privado"
+    },
+    {
+      "id": "09_novedades_v2",
+      "yt": "X522pBqZwDw",
+      "published": "2026-11-20T01:00Z",
+      "via": "vidIQ",
+      "style": "v2",
+      "replaced": "versión v1 He6cxbepWxo pasada a privado"
+    },
+    {
+      "id": "06_mapa_v2",
+      "yt": "PIRojtoyjbk",
+      "published": "2026-11-21T01:00Z",
+      "via": "vidIQ",
+      "style": "v2",
+      "replaced": "versión v1 tAdFZ81Ykqo pasada a privado"
+    },
+    {
+      "id": "07_personajes_v2",
+      "yt": "jFNzMzmk-Og",
+      "published": "2026-11-22T01:00Z",
+      "via": "vidIQ",
+      "style": "v2",
+      "replaced": "versión v1 efCkU5B4oYE pasada a privado"
+    }
   ],
-  "topic_ideas_from_vidiq_2026-11-16": ["cómo jugar GTA 6 en PC (o sin consola)", "cómo descargar GTA 6 en PS5", "qué consola comprar para GTA 6", "jugar antes con cuenta de Nueva Zelanda (explicar riesgos)", "por qué los coches de GTA 6 parecen lentos", "hacer stream de GTA 6 desde PS5 sin capturadora"]
+  "topic_ideas_from_vidiq_2026-11-16": [
+    "cómo jugar GTA 6 en PC (o sin consola)",
+    "cómo descargar GTA 6 en PS5",
+    "qué consola comprar para GTA 6",
+    "jugar antes con cuenta de Nueva Zelanda (explicar riesgos)",
+    "por qué los coches de GTA 6 parecen lentos",
+    "hacer stream de GTA 6 desde PS5 sin capturadora"
+  ]
 }
