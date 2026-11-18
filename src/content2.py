@@ -82,8 +82,25 @@ VIDEOS2 = [
   ]),
 ]
 
+VIDEOS2.append(
+ dict(id="11_metacritic99", title="GTA 6 sacó 99: empata el récord de la historia #Shorts",
+  desc="Las reseñas de GTA 6 salieron el 18 de noviembre de 2026: 99 en Metacritic con más de 100 reseñas, empatando con Zelda: Ocarina of Time como el juego mejor valorado de la historia. Nota máxima en IGN, Edge, Game Informer y GamesRadar+. Sale el 19 de noviembre en PS5 y Xbox Series X|S.",
+  hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #Metacritic",
+  tags=["gta 6","gta6","gta vi","gta 6 español","gta 6 metacritic","gta 6 reseñas","gta 6 nota","gta 6 review","gta 6 99","gta 6 récord","gta 6 análisis","gta 6 ocarina of time"],
+  beats=[
+   dict(say="GTA 6 acaba de hacer historia.", scene="city", fx="title", text="GTA 6 HIZO *HISTORIA*", sfx="boom"),
+   dict(say="Hoy salieron las reseñas, y en Metacritic tiene un...", scene="highway", fx="big", label="METACRITIC · RESEÑAS", value="18 NOV", sub="más de 100 reseñas", sfx="riser"),
+   dict(say="¡Noventa y nueve!", scene="police", fx="stamp", text="99", sfx="slam"),
+   dict(say="Empata con Zelda Ocarina of Time como el juego mejor valorado de la historia.", scene="city", fx="vs", a="GTA 6", b="OCARINA", sfx="boom"),
+   dict(say="Nota máxima en IGN, Edge, Game Informer y GamesRadar.", scene="beach", fx="list", items=[("star","IGN"),("star","Edge"),("star","Game Informer"),("star","GamesRadar")]),
+   dict(say="Y según GamesRadar, ni una sola reseña negativa o mixta.", scene="police", fx="big", label="NEGATIVAS O MIXTAS", value="0", sub="según GamesRadar", sfx="boom"),
+   dict(say="Para comparar: GTA 5 sacó noventa y siete. Vice City ya superó a Los Santos.", scene="highway", fx="timeline", points=[("GTA 5","97"),("GTA 6","99")], sfx="riser"),
+   dict(say="Sale mañana jueves en PS5 y Xbox Series. ¿Le darías un cien?", scene="beach", fx="title", text="MAÑANA: *VICE CITY*", sfx="boom"),
+   CTA,
+  ]))
+
 PRON = [
- ("GTA Online 2", "ge te a onláin dos"), ("GTA 6", "ge te a seis"), ("GTA 5", "ge te a cinco"), ("GTA Online", "ge te a onláin"), ("GTA", "ge te a"),
+ ("Game Informer", "guéim informer"), ("GamesRadar", "guéims rádar"), ("Metacritic", "métacrític"), ("Ocarina of Time", "ocarina of taim"), ("IGN", "i ye ene"), ("Edge", "ech"), ("Los Santos", "los santos"), ("GTA Online 2", "ge te a onláin dos"), ("GTA 6", "ge te a seis"), ("GTA 5", "ge te a cinco"), ("GTA Online", "ge te a onláin"), ("GTA", "ge te a"),
  ("PS5 Pro", "pe ese cinco pro"), ("PS5", "pe ese cinco"), ("PS4", "pe ese cuatro"),
  ("Xbox Series", "equis box síries"), ("Xbox One", "equis box uan"), ("Switch 2", "suich dos"), ("PC", "pe ce"),
  ("Vice City", "váis síti"), ("Rockstar", "rokstar"), ("Take-Two", "teik tu"),
