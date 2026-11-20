@@ -99,7 +99,25 @@ VIDEOS2.append(
    CTA,
   ]))
 
+VIDEOS2.append(
+ dict(id="12_huevo_pascua", title="GTA 6 esconde un huevo de Pascua... que es un HUEVO #Shorts",
+  desc="El jugador @xGarbett descubrió en GTA 6 un huevo de Pascua literal: tras unos 7 minutos subiendo una de las torres de comunicaciones más altas de Leonida, hay un nido con huevos gigantes. Si lanzas uno a la carretera, salta una escena secreta. Parece un guiño al huevo de Pascua de GTA Vice City (2002). Rockstar no ha comentado y la ubicación exacta aún no se ha revelado.",
+  hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #EasterEgg",
+  tags=["gta 6","gta6","gta vi","gta 6 español","gta 6 easter egg","gta 6 huevo de pascua","gta 6 secretos","gta 6 escena secreta","gta 6 torre","gta 6 leonida","gta 6 vice city","gta 6 curiosidades"],
+  beats=[
+   dict(say="GTA 6 esconde un huevo de Pascua... que es literalmente un huevo.", scene="city", fx="title", text="UN HUEVO DE PASCUA *LITERAL*", sfx="boom"),
+   dict(say="Lo descubrió el jugador xGarbett.", scene="highway", fx="big", label="LO DESCUBRIÓ", value="@xGarbett", sub="18 NOV · vídeo en X", sfx="riser"),
+   dict(say="Uno: sube una de las torres más altas de Leonida. Unos siete minutos.", scene="map", fx="big", label="1 · ESCALADA", value="7 MIN", sub="torre de comunicaciones · Leonida", sfx="boom", pin=None),
+   dict(say="Dos: arriba hay un nido con huevos gigantes.", scene="beach", fx="num", n=2, text="UN *NIDO* ARRIBA", sfx="slam"),
+   dict(say="Tres: lánzalo a la carretera.", scene="highway", fx="num", n=3, text="LÁNZALO A LA *CARRETERA*", sfx="slam"),
+   dict(say="Escena secreta: el huevo gira como balón y revienta en el auto de un tipo ochentero de Vice City.", scene="police", fx="stamp", text="¡PLAF!", sfx="slam"),
+   dict(say="Parece un guiño al huevo escondido en el Vice City de 2002.", scene="city", fx="timeline", points=[("2002","VICE CITY"),("2026","GTA 6")], sfx="riser"),
+   dict(say="Rockstar no ha dicho nada. ¿Ya encontraste la torre?", scene="beach", fx="title", text="¿YA LA *ENCONTRASTE*?", sfx="boom"),
+   CTA,
+  ]))
+
 PRON = [
+ ("xGarbett", "equis gárbet"), ("Kotaku", "kotáku"), ("2002", "dos mil dos"),
  ("Game Informer", "guéim informer"), ("GamesRadar", "guéims rádar"), ("Metacritic", "métacrític"), ("Ocarina of Time", "ocarina of taim"), ("IGN", "i ye ene"), ("Edge", "ech"), ("Los Santos", "los santos"), ("GTA Online 2", "ge te a onláin dos"), ("GTA 6", "ge te a seis"), ("GTA 5", "ge te a cinco"), ("GTA Online", "ge te a onláin"), ("GTA", "ge te a"),
  ("PS5 Pro", "pe ese cinco pro"), ("PS5", "pe ese cinco"), ("PS4", "pe ese cuatro"),
  ("Xbox Series", "equis box síries"), ("Xbox One", "equis box uan"), ("Switch 2", "suich dos"), ("PC", "pe ce"),
