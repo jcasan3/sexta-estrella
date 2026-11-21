@@ -150,6 +150,35 @@ class Scenes:
         pins = [(1500, 1820), (1180, 2300), (1290, 1760), (380, 640), (1050, 900), (1240, 700)]
         return dict(map=im, pins=pins, size=(MW, MH))
 
+    def mk_night(self):
+        sky = grad(H, [(0, (2, 4, 18)), (0.45, (10, 20, 50)), (0.62, (30, 50, 70)), (0.68, (8, 18, 26)), (1, (2, 6, 10))], EXT)
+        d = ImageDraw.Draw(sky)
+        for _ in range(260):
+            x, y = rng.uniform(0, EXT), rng.uniform(0, 1100); r = rng.choice([1, 1, 1, 2]); d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, int(rng.uniform(60, 230))))
+        moon = Image.new("RGBA", (520, 520), (0, 0, 0, 0)); ImageDraw.Draw(moon).ellipse([110, 110, 410, 410], fill=(235, 240, 255, 255))
+        md = ImageDraw.Draw(moon)
+        for cx, cy, r in ((200, 210, 30), (300, 300, 22), (250, 330, 14)): md.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(205, 212, 235, 255))
+        sky.alpha_composite(glow(moon, 50, 1.2), (EXT // 2 + 80, 200))
+        trees = Image.new("RGBA", (EXT, H), (0, 0, 0, 0)); td = ImageDraw.Draw(trees); r = np.random.default_rng(21)
+        x = 0
+        while x < EXT:
+            h = r.uniform(250, 620); w = r.uniform(18, 34); base = 1240
+            td.rectangle([x, base - h, x + w, base], fill=(3, 8, 10, 255))
+            for k in range(6):
+                yy = base - h + k * h / 7; ww = (40 + 22 * k) * r.uniform(0.7, 1.2)
+                td.ellipse([x + w / 2 - ww, yy - 26, x + w / 2 + ww, yy + 26], fill=(3, 8, 10, 255))
+            x += r.uniform(70, 190)
+        water = grad(H - 1240, [(0, (10, 22, 34)), (1, (2, 4, 8))], EXT)
+        refl = trees.crop((0, 1240 - 620, EXT, 1240)).transpose(Image.FLIP_TOP_BOTTOM)
+        refl.putalpha(refl.getchannel("A").point(lambda a: a // 4)); water.alpha_composite(refl.resize((EXT, H - 1240)).filter(ImageFilter.GaussianBlur(4)))
+        fog = Image.new("RGBA", (EXT, H), (0, 0, 0, 0)); fd = ImageDraw.Draw(fog)
+        for k in range(9): fd.ellipse([k * 180 - 200, 1120 + (k % 3) * 40, k * 180 + 260, 1300 + (k % 3) * 40], fill=(150, 190, 210, 60))
+        ufo = Image.new("RGBA", (560, 1400), (0, 0, 0, 0)); ud = ImageDraw.Draw(ufo)
+        ud.polygon([(250, 120), (310, 120), (520, 1400), (40, 1400)], fill=(190, 255, 230, 60))
+        ud.ellipse([110, 70, 450, 170], fill=(40, 50, 70, 255), outline=(150, 255, 220, 255), width=6); ud.ellipse([200, 20, 360, 110], fill=(120, 230, 210, 220))
+        for i in range(6): ud.ellipse([135 + i * 55, 115, 155 + i * 55, 135], fill=YEL + (255,))
+        return dict(sky=sky, trees=trees, water=water, fog=fog.filter(ImageFilter.GaussianBlur(40)), ufo=glow(ufo, 25, 1.2))
+
 SC = Scenes()
 
 def background(scene, t, beat_t, pin_state=None):
@@ -221,6 +250,19 @@ def background(scene, t, beat_t, pin_state=None):
             r = 22 + (10 * (0.5 + 0.5 * math.sin(t * 8)) if hot else 0)
             d.ellipse([sx - r - 14, sy - r - 14, sx + r + 14, sy + r + 14], outline=(YEL if hot else WHITE) + (180,), width=5)
             d.ellipse([sx - r * 0.6, sy - r * 0.6, sx + r * 0.6, sy + r * 0.6], fill=(YEL if hot else PINK) + (255,))
+        return fr
+    if scene in ("night", "ufo"):
+        c = SC.get("night"); ox = int(200 + 120 * math.sin(t * 0.22))
+        fr = c["sky"].crop((ox // 3, 0, ox // 3 + W, H)).copy()
+        if scene == "ufo":
+            fr.alpha_composite(c["ufo"], (int(W / 2 - 280 + 60 * math.sin(t * 0.9)), int(80 + 20 * math.sin(t * 2.1))))
+        fr.alpha_composite(c["trees"].crop((ox, 0, ox + W, H))); fr.alpha_composite(c["water"].crop((ox, 0, ox + W, c["water"].height)), (0, 1240))
+        fx_ = int((t * 25) % 400); fr.alpha_composite(c["fog"].crop((fx_, 0, fx_ + W, H)))
+        d = ImageDraw.Draw(fr)
+        for k in range(22):  # luciérnagas
+            x = (k * 137 + 40 * math.sin(t * 0.8 + k)) % W; y = 900 + (k * 71) % 700 + 30 * math.sin(t * 1.3 + k * 2)
+            a = int(120 + 120 * math.sin(t * 3 + k)); r = 5 + k % 3
+            d.ellipse([x - r, y - r, x + r, y + r], fill=(220, 255, 120, max(0, a)))
         return fr
     raise ValueError(scene)
 
@@ -349,6 +391,10 @@ def cap_img(words, active):
         W_ = w.upper(); d.text((x, 14), W_, font=f, fill=(YEL if i == active else WHITE), stroke_width=st, stroke_fill=BLACK); x += f.getlength(W_) + sp
     return im
 
+def fmt_num(v, dec=0):
+    if dec: return f"{v:,.{dec}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    return f"{int(round(v)):,}".replace(",", ".")
+
 # ---------------- escena ----------------
 class Beat:
     def __init__(self, b, n, idx, prev_pin):
@@ -364,8 +410,10 @@ class Beat:
         b = self.b; fx = b["fx"]; c = self.cache
         if fx == "title": c["lines"] = big_text_lines(b["text"], 170)
         elif fx == "stamp":
-            f = F(430); tw = int(f.getlength(b["text"])); st = Image.new("RGBA", (tw + 160, 560), (0, 0, 0, 0)); d = ImageDraw.Draw(st)
-            d.rounded_rectangle([10, 10, st.width - 10, 550], radius=50, outline=RED + (255,), width=26, fill=(30, 0, 8, 170)); d.text((80, -20), b["text"], font=f, fill=RED, stroke_width=10, stroke_fill=BLACK)
+            fs = 430
+            while F(fs).getlength(b["text"]) > 760 and fs > 200: fs -= 20
+            f = F(fs); tw = int(f.getlength(b["text"])); st = Image.new("RGBA", (tw + 160, 560), (0, 0, 0, 0)); d = ImageDraw.Draw(st)
+            d.rounded_rectangle([10, 10, st.width - 10, 550], radius=50, outline=RED + (255,), width=26, fill=(30, 0, 8, 170)); d.text((80, -20 + (430 - fs) * 0.55), b["text"], font=f, fill=RED, stroke_width=10, stroke_fill=BLACK)
             c["stamp"] = glow(st.rotate(-8, expand=True, resample=Image.BICUBIC), 20)
         elif fx == "big":
             c["label"] = label(b["label"]); c["val"] = glow(simple(b["value"], 300, YEL, max_w=1000), 25, 0.8)
@@ -387,6 +435,14 @@ class Beat:
             c["name"] = simple(b["text"], 130, YEL, max_w=980); c["sub"] = label(b["sub"].upper(), PINK)
         elif fx == "vs":
             c["a"] = simple(b["a"], 210, WHITE); c["b"] = simple(b["b"], 210, YEL)
+        elif fx == "counter":
+            c["label"] = label(b["label"])
+            if b.get("sub"): c["sub"] = simple(b["sub"], 56, WHITE, "black", stroke=5, max_w=960)
+        elif fx == "bars":
+            vals = [v for _, v in b["bars"]]; c["max"] = max(vals)
+            c["names"] = [simple(n, 64, WHITE, "black", stroke=5, max_w=900) for n, _ in b["bars"]]
+            c["vals"] = [simple(b.get("fmt", "{}").format(fmt_num(v)), 84, YEL, max_w=400) for _, v in b["bars"]]
+            if b.get("title"): c["title"] = big_text_lines(b["title"], 110, max_lines=2)
         elif fx == "cta":
             c["name"] = simple(CHANNEL, 140, WHITE); c["handle"] = simple(HANDLE, 64, CYAN, "black", stroke=5)
             c["btn"] = label("SÍGUEME", RED); c["btn"] = c["btn"].resize((c["btn"].width * 2, c["btn"].height * 2), Image.LANCZOS)
@@ -452,6 +508,29 @@ class Beat:
                 for k in (0, math.pi):
                     x = W / 2 + 120 * math.cos(ang + k); y = 690 + 40 * math.sin(ang + k); d.ellipse([x - 22, y - 22, x + 22, y + 22], fill=PINK + (255,), outline=BLACK + (255,), width=5)
                 d.arc([W / 2 - 140, 630, W / 2 + 140, 750], 0, 360, fill=WHITE + (160,), width=6)
+        elif fx == "counter":
+            s, a = slam(t, 0.0, 0.25); paste(fr, c["label"], W / 2, 430, 1, a)
+            p = ease(min(1, t / max(0.4, b.get("roll", 1.2)))); v = b["value"] * p
+            txt = b.get("prefix", "") + fmt_num(v, b.get("dec", 0)) + b.get("suffix", "")
+            done = p >= 1; key = ("cnt", txt)
+            if key not in c: c[key] = glow(simple(txt, 280, YEL if done else WHITE, max_w=1000), 25, 0.8 if done else 0.4)
+            sc = 1.0 + (0.18 * max(0, 1 - (t - b.get("roll", 1.2)) / 0.25) if done else 0)
+            paste(fr, c[key], W / 2, 680, sc, 1)
+            if "sub" in c: paste(fr, c["sub"], W / 2, 920, 1, slam(t, 0.3, 0.3)[1])
+        elif fx == "bars":
+            n = len(c["names"]); y0 = 400
+            if "title" in c:
+                y = 260
+                for i, l in enumerate(c["title"]): s, a = slam(t, 0.0); paste(fr, l, W / 2, y + l.height / 2, s, a); y += l.height - 20
+                y0 = y + 60
+            d = ImageDraw.Draw(fr); gap = min(260, 900 / n)
+            for i in range(n):
+                t0 = 0.1 + i * min(0.5, (self.dur - 0.8) / n); p = ease((t - t0) / 0.7)
+                if t < t0: continue
+                y = y0 + i * gap; paste(fr, c["names"][i], 90 + c["names"][i].width / 2, y, 1, min(1, (t - t0) * 4))
+                bw = max(8, 900 * (b["bars"][i][1] / c["max"]) * p); col = YEL if b["bars"][i][1] == c["max"] else CYAN
+                d.rounded_rectangle([90, y + 50, 90 + bw, y + 130], radius=18, fill=col + (255,), outline=BLACK + (255,), width=6)
+                if p > 0.6: v = c["vals"][i]; paste(fr, v, min(W - v.width / 2 - 10, 90 + bw - v.width / 2 - 14) if bw > v.width + 30 else 90 + bw + v.width / 2 + 10, y + 90, 1, 1)
         elif fx == "cta":
             s, a = slam(t, 0.0, 0.3); paste(fr, c["star"], W / 2, 430, s, a, rot=int(10 * math.sin(t * 2.5)))
             s, a = slam(t, 0.15); paste(fr, c["name"], W / 2, 700, s, a); paste(fr, c["handle"], W / 2, 820, 1, slam(t, 0.25)[1])
@@ -486,7 +565,8 @@ class Video:
         bt = self.beats[bi]; t = f / FPS; g = sum(self.durs[:bi]) + f; T = g / FPS
         fr = background(bt.b["scene"], T, t, bt.pin_state)
         fr.alpha_composite(vignette())
-        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); bt.fg(layer, t); bt.caption(layer, t)
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        bt.fg(layer, t + ((0.6 if bt.b["fx"] not in ("counter", "bars") else 0.35) if bi == 0 else 0)); bt.caption(layer, max(t, 0.07) if bi == 0 else t)
         dx = dy = 0
         if bt.shake_t is not None and t < 0.35:
             k = (1 - t / 0.35) * 18; dx, dy = int(rng.uniform(-k, k)), int(rng.uniform(-k, k))

@@ -11,3 +11,32 @@
 - Mismo hallazgo, "descubrimiento de jugadores, no documentado oficialmente", torre exacta no verificada, huevo de chocolate escondido en Vice City (2002): https://www.ibtimes.co.uk/gta-6-player-discovers-literal-easter-egg-leonida-1833342 (19/11/2026)
 - Kotaku live blog lo recoge con el post de xGarbett (18/11/2026; habla de "unos seis minutos"): https://kotaku.com/live-updates-on-gta-6-the-biggest-launch-in-gaming-history-2000758030
 - Sin comentario de Rockstar en ninguna de las tres fuentes.
+
+## Lote 2026-11-22 (consultado 21/11/2026)
+
+### 13_ventas
+- 3.790 M$ en ventas minoristas el primer día (estimación de la compañía hasta el final del 19/11), anunciado por Rockstar el 20/11; 32,5 M de copias vendidas antes del lanzamiento; GTA V hizo 1.000 M$ en 3 días (2013): AP vía ABC News, https://abcnews.com/US/wireStory/grand-theft-auto-vi-sets-record-379b-day-138335808 (20/11/2026)
+- Mismas cifras atribuidas a Take-Two; supera la taquilla mundial de "Spider-Man: Brand New Day" (2.500 M$); casi 8 M de espectadores simultáneos en directo según Streams Charts: https://www.forbes.com/sites/antoniopequenoiv/2026/11/20/gta-6-raked-in-38-billion-sales-on-first-day-the-largest-entertainment-launch-ever/ (20/11/2026)
+
+### 14_dinero (ambas guías coinciden en todo lo usado)
+- Autos robados para Moses en Port Gellhorn (cap. 2, ~1.000 $ o más; rechaza autos con rastreador), encargos de Randy (cap. 3, más de 30.000 $), joyerías con Yasmani (10.000-25.000 $), bóvedas de banco (hasta 205.000 $), se pierde efectivo al ser arrestado o morir: https://www.gtabase.com/gta-6/articles/how-to-make-money-fast-in-gta-6 (20/11/2026) y https://www.keengamer.com/articles/guides/gta-vi-best-ways-to-make-money-fast/ (20/11/2026)
+
+### 15_radio
+- Cocoteo FM con Bad Bunny ("Otra Noche en Miami"), Myke Towers y Calle 13; Radio La Ola con Celia Cruz y "Pedro Navaja" (Willie Colón y Rubén Blades): https://www.pushsquare.com/guides/gta-6-radio-songs-all-music-radio-stations-and-artists y https://gamerant.com/gta-6-all-songs-artists-radio-stations/
+- "20 emisoras de música" (GameRant); Push Square lista 21: en el vídeo se dice "unas veinte".
+- Descartado por no confirmarse en dos fuentes: ROSALÍA y Karol G en Cocoteo FM, Héctor Lavoe, banda sonora de Justice/"My Only Vice".
+
+### 16_duracion
+- Rob Nelson (Rockstar North) a The New York Times: su partida duró ~80 h, con historia y objetivos opcionales con consecuencias narrativas; jugó en febrero de 2026. Es una partida, no estimación oficial: https://www.gamesradar.com/games/grand-theft-auto/how-long-is-gta-6-about-80-hours-according-to-one-rockstar-devs-playthrough/ (27/08/2026) y https://techradar.com/gaming/gta-6-will-be-a-massive-game-and-rockstars-longest-yet-as-the-studio-confirms-it-can-take-up-to-80-hours-to-beat (28/08/2026)
+
+### 17_secretos
+- Edificio como el de Dexter en Vice City, loros parlantes en una licorería de los Cayos que revelan dinero, perro con gafas y chaleco en moto acuática, NPCs que hablan del misterio del Monte Chiliad en una misión temprana, Bigfoot cerca de Cottonmouth Lake. Hallazgos de jugadores (Reddit) recopilados: https://www.gamingbible.com/news/gta-6-easter-eggs-778903-20261120 (20/11/2026). Se presentan como hallazgos de jugadores, sin confirmación de Rockstar.
+
+### 18_misterio
+- Estatua cerca de Manifest Canyon: cuatro caballos con símbolos, el mando vibra y pita al acercarse, uno lleva un cono de tráfico; especulación de que sea el nuevo Chiliad: GamingBible (enlace de arriba).
+- Mural de Chiliad (ovni, huevo, jetpack) en GTA V (2013); en agosto de 2025 el youtuber Gator Keys propuso que eran pistas del 100 %, sin confirmación oficial: https://www.gamesradar.com/games/grand-theft-auto/gta-5-sleuths-finally-work-out-the-infamous-mount-chiliad-mystery-after-12-years-in-the-most-anticlimatic-way-possible-right-before-gta-6-likely-gives-them-another-mystery-to-solve (14/08/2025)
+
+### 19_trofeos
+- 55 trofeos: 1 platino, 2 oro, 6 plata, 46 bronce; "The Truth Is Out There" es de bronce y oculto, con método aún sin confirmar: https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/ (19/11/2026)
+- Descripción del trofeo "What the hell just happened?", bronce: https://www.gamerguides.com/grand-theft-auto-vi/psn-trophies/the-truth-is-out-there
+- Guía que lo liga a un ovni de noche (2:00) en Kelly County, al este de Port Gellhorn, con el capítulo 2: https://beebom.com/gta-6-ufo-location-trophy-guide/ (19/11/2026). En el vídeo se dice "según Beebom" y "otras guías aún no lo confirman".

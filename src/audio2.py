@@ -8,7 +8,7 @@ from content2 import VIDEOS2, spoken
 ROOT = os.environ.get("SE_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KOK = os.path.join(ROOT, "voices", "kokoro")
 SR = 44100; FPS = 30
-VOICE = os.environ.get("SE_VOICE", "em_alex"); SPEED = float(os.environ.get("SE_SPEED", "1.12"))
+VOICE = os.environ.get("SE_VOICE", "em_alex"); SPEED = float(os.environ.get("SE_SPEED", "1.15"))
 LEAD, TAIL = 0.06, 0.14
 rng = np.random.default_rng(3)
 
