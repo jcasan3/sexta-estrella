@@ -180,7 +180,7 @@ VIDEOS2 += [
    dict(say="Al subirte al auto, ¿cuál pones primero?", scene="city", fx="vs", a="COCOTEO", b="LA OLA", sfx="boom"),
    CTA,
   ]),
- dict(id="16_duracion", title="¿Cuántas horas dura GTA 6? Rockstar respondió #Shorts",
+ dict(id="16_duracion", title="¿Cuántas horas dura GTA 6? Un jefe de Rockstar responde #Shorts",
   desc="Rob Nelson, jefe de Rockstar North, contó a The New York Times que su partida de GTA 6 duró unas 80 horas, con la historia y objetivos opcionales. Es una partida de un desarrollador, no una cifra oficial para todos. Fuentes: GamesRadar+ y TechRadar.",
   hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #GTA6Historia",
   tags=TAGS0 + ["cuanto dura gta 6", "gta 6 duración", "gta 6 horas", "gta 6 historia", "gta 6 cuantas horas", "gta 6 80 horas", "gta 6 campaña", "rockstar north"],

@@ -1,0 +1,14 @@
+{
+  "batch": "2026-11-22",
+  "status": "borradores en vidIQ, pendientes del sí de Vic",
+  "commit_videos": "b07ac67804ff8363ceb67b22ad99a5c345e1f89c",
+  "drafts": [
+    {"id": "13_ventas", "postId": "12562528-8c05-4517-8d1d-fa07fbfa11e0", "revision": "93335fe2", "publishAt": "2026-11-23T01:00:00Z"},
+    {"id": "14_dinero", "postId": "75684180-a63d-4e35-b4c0-097ca61b1af5", "revision": "bdd54c16", "publishAt": "2026-11-24T01:00:00Z"},
+    {"id": "17_secretos", "postId": "e5e3b39f-77bb-4d4a-a63f-d5db735c3253", "revision": "918b5236", "publishAt": "2026-11-25T01:00:00Z"},
+    {"id": "15_radio", "postId": "ccaf1646-0422-481c-bdd9-59426be67434", "revision": "7908e7c1", "publishAt": "2026-11-26T01:00:00Z"},
+    {"id": "18_misterio", "postId": "d1086998-37bd-46f8-97c8-6c2c07518cb4", "revision": "969d460d", "publishAt": "2026-11-27T01:00:00Z"},
+    {"id": "16_duracion", "postId": "296d387f-163d-43aa-9edc-976059bb524e", "revision": "0545f3bc", "publishAt": "2026-11-28T01:00:00Z"},
+    {"id": "19_trofeos", "postId": "32a3a508-383b-4f66-9a2d-54187be20120", "revision": "8c6a44a2", "publishAt": "2026-11-29T01:00:00Z"}
+  ]
+}
