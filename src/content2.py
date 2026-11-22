@@ -247,3 +247,26 @@ PRON = [
  ("Kelly County", "kéli káunti"), ("Manifest Canyon", "mánifest kánion"), ("Cottonmouth Lake", "kótonmauz leik"), ("Bigfoot", "bigfut"),
  ("Dexter", "déxter"), ("Calle 13", "calle trece"), ("Chiliad", "chíliad"), ("Kalaga", "kalága"), ("jetpack", "yetpak"), ("Willie Colón", "wíli colón"), ("Cocoteo FM", "cocotéo efe eme"),
 ] + PRON
+
+# ---------------- Vídeo extra 2026-11-22: GTA VI: The Festival (Miami, 21/11) ----------------
+VIDEOS2.append(
+ dict(id="20_festival", title="GTA 6 convirtió Miami en Vice City por una noche #Shorts",
+  desc="El 21 de noviembre de 2026, Rockstar y PlayStation celebraron el lanzamiento de GTA 6 con 'Grand Theft Auto VI: The Festival' en Mana Wynwood, Miami: dos escenarios con artistas del juego y de su banda sonora, como Travis Scott, Cardi B, Metro Boomin, Justice, Rauw, Tainy y Ca7riel & Paco Amoroso. Las entradas se repartieron por sorteo (máximo dos por persona) y, según Rockstar, todo lo recaudado va a organizaciones benéficas de Miami. Fuentes: Rockstar Games en X, Gematsu, Complex y DancehallMag.",
+  hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #GTA6Festival",
+  tags=TAGS0 + ["gta 6 festival", "gta vi the festival", "gta 6 miami", "gta 6 travis scott", "gta 6 cardi b", "gta 6 concierto", "gta 6 vice city", "gta 6 noticias", "gta 6 música"],
+  beats=[
+   dict(say="Vice City existe. Y anoche fue una fiesta.", scene="night", fx="title", text="ANOCHE MIAMI FUE *VICE CITY*", sfx="boom"),
+   dict(say="Rockstar y PlayStation montaron el festival oficial de GTA 6 en Miami.", scene="city", fx="big", label="21 NOV · MIAMI", value="THE FESTIVAL", sub="Rockstar + PlayStation · Mana Wynwood", sfx="boom"),
+   dict(say="Dos escenarios, con artistas del juego y de su banda sonora.", scene="highway", fx="counter", label="ESCENARIOS", value=2, roll=0.6, sub="música sin parar", sfx="riser"),
+   dict(say="Cardi B, Metro Boomin, Justice... y cerrando, Travis Scott.", scene="night", fx="list", items=[("star", "Cardi B"), ("star", "Metro Boomin"), ("star", "Justice"), ("star", "Travis Scott")]),
+   dict(say="Y sabor latino: Rauw, Tainy, Catriel y Paco Amoroso.", scene="beach", fx="list", items=[("star", "Rauw"), ("star", "Tainy"), ("star", "Ca7riel & Paco Amoroso")]),
+   dict(say="No bastaba con pagar: entradas por sorteo, máximo dos.", scene="police", fx="stamp", text="SORTEO", sfx="slam"),
+   dict(say="Y según Rockstar, todo lo de las entradas va a causas benéficas de Miami.", scene="city", fx="title", text="TODO PARA *CARIDAD*", sfx="boom"),
+   dict(say="¿Tú habrías ido?", scene="night", fx="vs", a="IR", b="JUGAR", sfx="boom"),
+   CTA,
+  ]))
+
+PRON = [
+ ("Travis Scott", "trávis scot"), ("Cardi B", "cardi bi"), ("Metro Boomin", "métro búmin"), ("Justice", "yástis"),
+ ("Tainy", "téini"), ("Rauw", "rau"), ("PlayStation", "pléisteishon"), ("Paco Amoroso", "paco amoroso"),
+] + PRON
