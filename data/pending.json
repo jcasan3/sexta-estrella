@@ -55,5 +55,15 @@
     "publishAt": "2026-11-23T01:00:00Z",
     "status": "borrador, pendiente del sí de Vic",
     "noticia": "GTA VI: The Festival en Miami (21/11)"
+  },
+  "extra_2": {
+    "id": "21_parche",
+    "postId": "9d324224-a55f-4a9c-9c14-ed2d897266a0",
+    "revision": "22a83d12",
+    "uploadId": "cf8f47cf-c3e6-4e4f-8b1d-3f230ddbb0cb",
+    "commit_video": "36628969945f16aae627a85483fe7a3a27c4f6ac",
+    "publishAt": "2026-11-25T01:00:00Z",
+    "status": "borrador, pendiente del sí de Vic",
+    "noticia": "Primer parche de GTA 6, 01.002.002 (23/11)"
   }
 }
