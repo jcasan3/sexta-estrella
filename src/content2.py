@@ -270,3 +270,24 @@ PRON = [
  ("Travis Scott", "trávis scot"), ("Cardi B", "cardi bi"), ("Metro Boomin", "métro búmin"), ("Justice", "yástis"),
  ("Tainy", "téini"), ("Rauw", "rau"), ("PlayStation", "pléisteishon"), ("Paco Amoroso", "paco amoroso"),
 ] + PRON
+
+# ---------------- Vídeo extra 2026-11-24: primer parche de GTA 6 (01.002.002, 23/11) ----------------
+VIDEOS2.append(
+ dict(id="21_parche", title="GTA 6 recibe su PRIMER parche: esto arregla #Shorts",
+  desc="El 23 de noviembre de 2026 llegó el primer parche de GTA 6 tras el lanzamiento: versión 01.002.002 en PS5 (unos 600 MB) y 1.0.2.2 en Xbox Series X|S (unos 1,6 GB), repartido por fases. Según las notas de Rockstar, arregla llamadas de teléfono que no saltaban y bloqueaban misiones de la historia, el autoguardado, varios cierres del juego y el clima que se quedaba igual durante mucho tiempo. Fuentes: Push Square, VICE, Techloy y PlayStation LifeStyle.",
+  hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #GTA6Parche",
+  tags=TAGS0 + ["gta 6 parche", "gta 6 actualización", "gta 6 update", "gta 6 1.002.002", "gta 6 notas del parche", "gta 6 bug llamada", "gta 6 errores", "gta 6 autoguardado", "gta 6 noticias"],
+  beats=[
+   dict(say="¿Atascado en la historia de GTA 6? Revisa tus descargas.", scene="police", fx="title", text="¿ATASCADO EN *GTA 6*?", sfx="boom"),
+   dict(say="Ya salió el primer parche: la versión uno punto cero cero dos.", scene="city", fx="big", label="23 NOV · PRIMER PARCHE", value="1.002.002", sub="PS5 · en Xbox: 1.0.2.2", sfx="boom"),
+   dict(say="Lo más importante: llamadas de teléfono que no saltaban y te bloqueaban misiones.", scene="highway", fx="stamp", text="ARREGLADO", sfx="slam"),
+   dict(say="Además, según Rockstar: autoguardado, cierres del juego y el clima que no cambiaba.", scene="beach", fx="list", items=[("ok", "Llamadas"), ("ok", "Autoguardado"), ("ok", "Cierres"), ("ok", "Clima")]),
+   dict(say="Pesa poco: unos seiscientos megas en PS5 y uno coma seis gigas en Xbox.", scene="city", fx="bars", title="TAMAÑO EN *MB*", fmt="{} MB", bars=[("PS5", 604), ("Xbox Series", 1600)], sfx="boom"),
+   dict(say="Si no te aparece, espera: Rockstar lo está soltando por fases.", scene="night", fx="title", text="LLEGA *POR FASES*", sfx="riser"),
+   dict(say="¿Ya puedes seguir con Jason y Lucía?", scene="beach", fx="vs", a="JASON", b="LUCÍA", sfx="boom"),
+   CTA,
+  ]))
+
+PRON = [
+ ("1.002.002", "uno punto cero cero dos"), ("1.0.2.2", "uno punto cero punto dos punto dos"),
+] + PRON
