@@ -291,3 +291,26 @@ VIDEOS2.append(
 PRON = [
  ("1.002.002", "uno punto cero cero dos"), ("1.0.2.2", "uno punto cero punto dos punto dos"),
 ] + PRON
+
+# ---------------- Vídeo extra 2026-11-25: portal secreto a Vice City 2002 (viral, 23-24/11) ----------------
+VIDEOS2.append(
+ dict(id="22_portal", title="GTA 6 esconde un PORTAL al Vice City de 2002 #Shorts",
+  desc="El youtuber Memeio encontró en GTA 6 un secreto que se ha hecho viral: tras unos tres días siguiendo los cables eléctricos de Leonida, activó 12 subestaciones (empezando por la torre de radio de Key Lento) y sus letras forman LIFE IS PASSING ME BY, un truco clásico de GTA Vice City. Al terminar, en la central de Turtle Head se abre de noche un portal al Malibu Club de 2002 con gráficos de PS2, y de premio te llevas la camisa hawaiana de Tommy Vercetti y una moto clásica. Es un hallazgo de jugadores; los pasos exactos aún varían entre guías. Fuentes: VGC, VICE, Push Square, MIXED y thegta6news.",
+  hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #GTA6Secretos",
+  tags=TAGS0 + ["gta 6 portal", "gta 6 vice city", "gta 6 easter egg", "gta 6 secretos", "gta 6 tommy vercetti", "gta 6 malibu club", "gta 6 camisa tommy", "gta 6 subestaciones", "life is passing me by", "gta 6 curiosidades"],
+  beats=[
+   dict(say="GTA 6 tiene un portal... al Vice City de 2002.", scene="ufo", fx="title", text="UN PORTAL AL *VICE CITY* DE 2002", sfx="boom"),
+   dict(say="Lo encontró el youtuber Memeio, siguiendo cables de luz por Leonida durante tres días.", scene="highway", fx="counter", label="SIGUIENDO CABLES", value=3, roll=0.7, sub="días · Memeio", sfx="riser"),
+   dict(say="Todo empieza en una torre de radio de Key Lento.", scene="map", fx="pin", text="KEY LENTO", sub="cayos · torre de radio", pin=1, sfx="pop"),
+   dict(say="De ahí, doce subestaciones. Y sus letras forman un truco clásico de Vice City.", scene="night", fx="big", label="12 SUBESTACIONES", value="LIFE IS PASSING ME BY", sub="truco de GTA Vice City", sfx="boom"),
+   dict(say="Al final, de noche, en la central de Turtle Head... se abre el portal.", scene="night", fx="stamp", text="¡PORTAL!", sfx="slam"),
+   dict(say="Apareces en el Malibu Club. Con gráficos de PlayStation 2.", scene="city", fx="timeline", points=[("2002", "MALIBU"), ("2026", "GTA 6")], sfx="riser"),
+   dict(say="Y te llevas la camisa hawaiana de Tommy Vercetti y una moto clásica.", scene="beach", fx="list", items=[("ok", "Camisa de Tommy"), ("ok", "Moto clásica")]),
+   dict(say="¿Tú ya lo intentaste?", scene="ufo", fx="vs", a="SÍ", b="AÚN NO", sfx="boom"),
+   CTA,
+  ]))
+
+PRON = [
+ ("Memeio", "mímeio"), ("Key Lento", "ki lénto"), ("Turtle Head", "tórtel jed"), ("Malibu Club", "málibu clob"),
+ ("Tommy Vercetti", "tómi verchéti"), ("LIFE IS PASSING ME BY", "laif is pásin mi bai"),
+] + PRON
