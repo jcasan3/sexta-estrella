@@ -18,3 +18,14 @@
 ## Hipótesis lote 22-28 nov (v2.1)
 - Cambios: gancho con texto visible desde el fotograma 0; 25-30 s (antes 28-34 s); voz a 1,15 (antes 1,12); fondo nuevo "night"/"ufo"; gráficos nuevos "counter" (cifra que sube) y "bars" (comparativa); temas post-lanzamiento con búsqueda (dinero, secretos, radio, duración, trofeos, récord de ventas).
 - Hipótesis: % visto medio ≥ 75 % y ≥ 10 vistas de media por vídeo a los 3 días (la semana pasada: 70 % y ~4 vistas en v2). Comprobar el 28/11.
+
+- **Resultado (28/11):** NO COMPROBADA. El lote 22-28 nov y los extras 20_festival y 21_parche nunca se publicaron (sin "sí" de Vic); solo salió 22_portal (2 vistas en 2 días). % visto medio v2 con datos: 57 % (baja respecto al 70 % por los vídeos del 20-22, que abren con afirmación). Aprendizaje: publicar cada día pesa más que cualquier mejora de estilo; si no hay "sí", el canal se para.
+
+## 2026-11-28: informe semanal 2 (ver data/reports/2026-11-28.md)
+- Se confirma: títulos = pregunta literal de búsqueda (los dos más vistos). "¿GTA 6 en PS4?" tiene 104 % visto: cierre que contesta la pregunta del gancho.
+- Los v2 que abren con afirmación ("6 cosas", "huevo de Pascua") retienen 29-41 %; los que abren con pregunta, 46-104 %.
+- Demanda en español tras el lanzamiento: PC (+2.096 %), 60 FPS (competencia baja), qué saber antes de jugar, dinero.
+
+## Hipótesis lote 29 nov - 5 dic (v2.2)
+- Cambios: todos los títulos son pregunta o búsqueda literal; todos los ganchos abren con pregunta o cifra; fondo nuevo "studio"; gráficos nuevos "gauge" y "phone"; cierre con pregunta al espectador antes del CTA; 25-31 s.
+- Hipótesis: % visto medio ≥ 60 % (ahora 57 %), ≥ 5 vistas de media por vídeo a los 3 días (ahora ~2-4) y al menos 1 comentario en el lote (ahora 0). Comprobar el 5/12. Requisito: que el lote se publique entero.

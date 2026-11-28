@@ -57,3 +57,35 @@
 - Memeio encontró el secreto siguiendo cables y subestaciones por Leonida unos tres días; vídeo publicado el 23/11; es una escena retro especial, no el Vice City completo; premios (camisa y moto ligadas a Tommy Vercetti) según VGC: https://mixed-news.com/en/gta-6-hidden-vice-city-easter-egg-memeio-power-lines/ (24/11/2026)
 - 12 subestaciones LPL en orden, inicio en la torre de radio Badger R&D de Key Lento, letras que forman LIFE IS PASSING ME BY (truco de Vice City), portal en el Reactor 2 de la central Turtle Head entre las 19:00 y las 6:00 del juego, Malibu Club con gráficos de PS2, camisa hawaiana de Tommy y moto clásica: https://thegta6news.com/news/gta-6-vice-city-portal-tommy-vercetti-easter-egg (23/11, act. 24/11/2026) y https://stupiddope.com/2026/11/gta-vi-vice-city-retro-easter-egg-guide-12-substations-life-is-passing-me-by-and-tommy-vercettis-shirt/ (24/11/2026, basado en guías de VGC y Push Square)
 - Las guías discrepan en detalles (viaje rápido, capítulo 3, con qué personaje entrar): no se usan en el vídeo. Sin comentario de Rockstar encontrado.
+
+## Lote 29 nov - 5 dic (consultado 28/11/2026)
+
+### 23_60fps
+- Objetivo de 30 FPS en PS5, PS5 Pro y Xbox Series X|S; PSSR y sombras con trazado de rayos solo en PS5 Pro: https://notebookcheck.net/Rockstar-reveals-GTA-6-console-performance-targets-and-PS5-Pro-upgrades.1447121.0.html (10/11/2026)
+- Marc Chambers (Rockstar) a Kotaku: el procesador de PS5 Pro no es lo bastante potente para la simulación a más FPS: https://hothardware.com/news/rockstar-breaks-silence-gta-6-will-ever-hit-60-fps-ps5-pro (18/11/2026)
+- Digital Foundry: 1440p interno en PS5, Pro y Series X; Series S 720p de base; Pro la más estable a 30, PS5 y Series X con bajones a 20 y pico, Series S hasta ~20: https://thegta6news.com/news/gta-6-30-fps (act. 24/11/2026), que cita https://www.digitalfoundry.net/features/gta-6-ps5-vs-ps5-pro-xbox-series-x-and-series-s-which-console-plays-best (18/11/2026)
+- Sin parche a 60 FPS anunciado (ninguna fuente lo menciona; el "truco" de Quick Resume de Xbox es un rumor no usado).
+
+### 24_record
+- Sony (PlayStation Blog, 23/11/2026): más de 39 millones de jugadores únicos en PS5 del 19 al 22 nov, 683 millones de horas, 17,4 h de media, "el mayor lanzamiento de la historia de PlayStation": https://thegta6news.com/news/gta-6-biggest-playstation-launch-39-million-players y https://tbreak.com/gta-6-39-million-ps5-players-sony/ (24/11/2026)
+- Streams Charts vía Insider Gaming: pico de 3,29 M en Twitch (récord de categoría, por delante de League of Legends 3,11 M y Fortnite 3,04 M) y ~7,6 M sumando Twitch, YouTube y Kick (preliminar): https://gta6times.com/news/gta-6-streaming-record-7-6-million-viewers-twitch (21/11/2026)
+
+### 25_consejos
+- Efectivo bajo las tablas sueltas del cuarto de Jason, solo efectivo hasta la misión "Buck Me", edificios azul oscuro con interior, ratón para Dolores (Focus): https://www.videogameschronicle.com/guide/gta-6-beginners-guide-6-tips-you-need-to-know-before-starting-gta-6/ (18/11/2026)
+- Se pierde el efectivo al morir o ser arrestado: VGC (arriba), https://beebom.com/gta-6-tips-and-tricks/ (19/11/2026) y https://www.gamenguide.com/articles/109210/20261119/gta-6-beginners-guide-everything-new-players-need-know-before-starting.htm (19/11/2026)
+- La policía recuerda tu aspecto; cambiar de ropa y salir de la zona: Beebom (arriba) y https://metaforge.app/gta-6/gta-6-beginners-guide-what-to-know-before-you-play
+
+### 26_pc
+- Sin versión de PC ni fecha anunciadas: https://tbreak.com/gta-6-update/ (27/11/2026) y https://gta6times.com/news/take-two-dmca-gta-6-pc-port-3007-github-repositories (25/11/2026)
+- Denuncia DMCA de Take-Two publicada por GitHub el 24/11 contra un port no oficial (recompilación de la versión de Xbox filtrada) y su red de 3.007 repositorios: gta6times (arriba), que cita https://github.com/github/dmca/blob/master/2026/11/2026-11-24-take-two.md ; proyectos offline: https://tbreak.com/gta-6-pc-port-projects-offline/ (24/11/2026)
+- Remote Play desde Xbox Series a PC y PS Remote Play desde PS5, con copia del juego: https://gta6times.com/news/gta-6-cloud-and-remote-play-how-to-stream-on-xbox (24/11/2026, cita Xbox Wire del 23/11 y Engadget)
+
+### 27_recortes
+- Rob Nelson a VGC: dardos y bolos fuera ("Darts is one we just didn't get to"); sí billar, tiros a canasta y pesas; Nelson y Scott Mitchell a PC Games: tenis planeado y cortado, sí minigolf, fuera arrastrarse, decorar la casa, fabricar objetos y cine/teatro: https://thegta6news.com/news/gta-6-nelson-darts-bowling (act. 25/11/2026), que cita VGC (19/11) y PC Games (25/11)
+- Motosierra: aparece en el mundo pero no se puede coger; Nelson a VGC: "too much for this game... did Jason and Lucia really need that": https://thegta6news.com/news/gta-6-no-chainsaw-katana (26/11/2026), que cita https://www.videogameschronicle.com/features/the-gta-6-spoiler-interview/
+
+### 28_actores
+- Créditos de Rockstar: Dylan Rourke (Jason), Manni L. Perez (Lucía), Bad Bunny (Mitico Mario), Kodak Black y Sexyy Red (ellos mismos), Roselyn Sanchez (Mia Caminos), Bobby Moynihan (Cal); Manni L. Perez nominada a Mejor Actuación en The Game Awards (10 dic): https://gta6times.com/news/gta-6-cast-rockstar-credits-jason-lucia (23/11/2026), que cita https://www.rockstargames.com/VI/credits y Xbox Wire (17/11/2026)
+
+### 29_pelicula
+- The Ankler (18/11/2026, Lesley Goldberg): según fuentes, Rockstar sigue sin interés en una película de GTA y está más abierta a Red Dead; un agente habló de más de 100 M$ por los derechos; Rockstar no respondió: https://thegta6news.com/news/gta-6-movie-rockstar-rejects-hollywood-red-dead (24/11/2026). Se presenta como reportaje, no como confirmación.

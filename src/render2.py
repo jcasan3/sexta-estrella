@@ -179,6 +179,33 @@ class Scenes:
         for i in range(6): ud.ellipse([135 + i * 55, 115, 155 + i * 55, 135], fill=YEL + (255,))
         return dict(sky=sky, trees=trees, water=water, fog=fog.filter(ImageFilter.GaussianBlur(40)), ufo=glow(ufo, 25, 1.2))
 
+    def mk_studio(self):
+        """Cuarto gamer nocturno (ilustración original): pared con LEDs, tele con atardecer synthwave, consola y mando."""
+        wall = grad(H, [(0, (10, 4, 26)), (0.5, (24, 8, 52)), (0.7, (14, 6, 30)), (1, (4, 2, 10))], EXT); d = ImageDraw.Draw(wall)
+        for x in range(0, EXT, 120): d.line([(x, 0), (x, 1180)], fill=(255, 255, 255, 10), width=2)
+        shelf = Image.new("RGBA", (EXT, H), (0, 0, 0, 0)); sd = ImageDraw.Draw(shelf); r = np.random.default_rng(7)
+        for sx in (60, EXT - 420):
+            for k in range(3):
+                y = 360 + k * 230; sd.rectangle([sx, y, sx + 360, y + 16], fill=(40, 20, 70, 255))
+                x = sx + 20
+                while x < sx + 330:
+                    w = r.uniform(30, 70); h = r.uniform(60, 170); col = [PINK, CYAN, YEL, (140, 90, 255)][int(r.integers(4))]
+                    sd.rounded_rectangle([x, y - h, x + w, y], radius=8, fill=(20, 10, 40, 255), outline=col + (200,), width=4); x += w + r.uniform(12, 30)
+        tv = Image.new("RGBA", (860, 520), (0, 0, 0, 0)); td = ImageDraw.Draw(tv)
+        scr = grad(460, [(0, (40, 10, 90)), (0.55, (255, 70, 150)), (0.62, (255, 190, 90)), (0.63, (30, 10, 60)), (1, (10, 4, 30))], 800)
+        sdd = ImageDraw.Draw(scr); sdd.ellipse([280, 120, 520, 360], fill=(255, 190, 90, 255))
+        for k in range(7): yy = 245 + k * 16; sdd.rectangle([270, yy, 530, yy + 3 + k], fill=(255, 70, 150, 255))
+        for k in range(12):
+            z = k / 12; yy = 290 + 170 * z ** 1.6; sdd.line([(0, yy), (800, yy)], fill=(255, 80, 200, 160), width=2)
+        for k in range(-8, 9): sdd.line([(400 + k * 30, 290), (400 + k * 140, 460)], fill=(255, 80, 200, 140), width=2)
+        td.rounded_rectangle([0, 0, 860, 520], radius=26, fill=(6, 4, 10, 255)); tv.alpha_composite(scr, (30, 30))
+        desk = grad(H - 1430, [(0, (30, 14, 50)), (1, (8, 4, 14))], EXT)
+        pad = Image.new("RGBA", (360, 220), (0, 0, 0, 0)); pd = ImageDraw.Draw(pad)
+        pd.ellipse([0, 40, 170, 220], fill=(16, 10, 26, 255)); pd.ellipse([190, 40, 360, 220], fill=(16, 10, 26, 255)); pd.rounded_rectangle([60, 30, 300, 150], radius=60, fill=(16, 10, 26, 255))
+        pd.rounded_rectangle([130, 56, 230, 76], radius=8, fill=CYAN + (255,))
+        for cx, cy in ((90, 100), (270, 100)): pd.ellipse([cx - 18, cy - 18, cx + 18, cy + 18], fill=(60, 50, 80, 255))
+        return dict(wall=wall, shelf=shelf, tv=tv, desk=desk, pad=pad)
+
 SC = Scenes()
 
 def background(scene, t, beat_t, pin_state=None):
@@ -263,6 +290,19 @@ def background(scene, t, beat_t, pin_state=None):
             x = (k * 137 + 40 * math.sin(t * 0.8 + k)) % W; y = 900 + (k * 71) % 700 + 30 * math.sin(t * 1.3 + k * 2)
             a = int(120 + 120 * math.sin(t * 3 + k)); r = 5 + k % 3
             d.ellipse([x - r, y - r, x + r, y + r], fill=(220, 255, 120, max(0, a)))
+        return fr
+    if scene == "studio":
+        c = SC.get("studio"); ox = int(200 + 90 * math.sin(t * 0.25))
+        fr = c["wall"].crop((ox // 3, 0, ox // 3 + W, H)).copy(); fr.alpha_composite(c["shelf"].crop((ox // 2, 0, ox // 2 + W, H)))
+        hue = (t * 0.35) % 1; led = tuple(int(255 * (0.5 + 0.5 * math.sin(2 * math.pi * (hue + k / 3)))) for k in range(3))
+        strip = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(strip).rectangle([0, 1150, W, 1185], fill=led + (255,))
+        fr.alpha_composite(glow(strip, 40, 1.6))
+        tvx = W // 2 - 430 + int(20 * math.sin(t * 0.25)); g = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(g).rounded_rectangle([tvx - 30, 880, tvx + 890, 1440], radius=40, fill=(255, 90, 170, 90)); fr.alpha_composite(g.filter(ImageFilter.GaussianBlur(50)))
+        fr.alpha_composite(c["tv"], (tvx, 900)); d = ImageDraw.Draw(fr)
+        sl = int((t * 120) % 460); d.rectangle([tvx + 30, 930 + sl, tvx + 830, 936 + sl], fill=(255, 255, 255, 40))
+        fr.alpha_composite(c["desk"].crop((ox, 0, ox + W, c["desk"].height)), (0, 1430))
+        fr.alpha_composite(c["pad"], (W // 2 - 180, 1610 + int(5 * math.sin(t * 2))))
         return fr
     raise ValueError(scene)
 
@@ -441,8 +481,29 @@ class Beat:
         elif fx == "bars":
             vals = [v for _, v in b["bars"]]; c["max"] = max(vals)
             c["names"] = [simple(n, 64, WHITE, "black", stroke=5, max_w=900) for n, _ in b["bars"]]
-            c["vals"] = [simple(b.get("fmt", "{}").format(fmt_num(v)), 84, YEL, max_w=400) for _, v in b["bars"]]
+            c["vals"] = [simple(b["vlabels"][i] if b.get("vlabels") else b.get("fmt", "{}").format(fmt_num(v)), 84, YEL, max_w=400) for i, (_, v) in enumerate(b["bars"])]
             if b.get("title"): c["title"] = big_text_lines(b["title"], 110, max_lines=2)
+        elif fx == "gauge":
+            c["label"] = label(b["label"])
+            if b.get("sub"): c["sub"] = simple(b["sub"], 56, WHITE, "black", stroke=5, max_w=960)
+            c["marks"] = [(m, simple(str(m), 64, WHITE, "black", stroke=5)) for m in b.get("marks", [])]
+        elif fx == "phone":
+            ph = Image.new("RGBA", (640, 1000), (0, 0, 0, 0)); d = ImageDraw.Draw(ph)
+            d.rounded_rectangle([0, 0, 640, 1000], radius=70, fill=(10, 8, 18, 255), outline=(255, 255, 255, 200), width=10)
+            d.rounded_rectangle([24, 24, 616, 976], radius=52, fill=(26, 14, 48, 255)); d.rounded_rectangle([250, 40, 390, 72], radius=16, fill=(6, 4, 10, 255))
+            ttl = b.get("app", "LEONIDA"); d.text((320 - F(54, "black").getlength(ttl) / 2, 90), ttl, font=F(54, "black"), fill=CYAN)
+            c["ph"] = glow(ph, 22, 0.7); c["msgs"] = []
+            for who, txt in b["items"]:
+                f = F(44, "xbold"); words = txt.split(); lines, cur = [], ""
+                for w_ in words:
+                    if f.getlength((cur + " " + w_).strip()) > 470: lines.append(cur); cur = w_
+                    else: cur = (cur + " " + w_).strip()
+                lines.append(cur); hh = 40 + 56 * len(lines) + (46 if who else 0)
+                m = Image.new("RGBA", (540, hh), (0, 0, 0, 0)); md = ImageDraw.Draw(m)
+                md.rounded_rectangle([0, 0, 540, hh], radius=30, fill=(255, 255, 255, 240)); y = 18
+                if who: md.text((26, y), who, font=F(36, "black"), fill=PINK); y += 46
+                for l in lines: md.text((26, y), l, font=f, fill=(20, 10, 30)); y += 56
+                c["msgs"].append(m)
         elif fx == "cta":
             c["name"] = simple(CHANNEL, 140, WHITE); c["handle"] = simple(HANDLE, 64, CYAN, "black", stroke=5)
             c["btn"] = label("SÍGUEME", RED); c["btn"] = c["btn"].resize((c["btn"].width * 2, c["btn"].height * 2), Image.LANCZOS)
@@ -531,6 +592,30 @@ class Beat:
                 bw = max(8, 900 * (b["bars"][i][1] / c["max"]) * p); col = YEL if b["bars"][i][1] == c["max"] else CYAN
                 d.rounded_rectangle([90, y + 50, 90 + bw, y + 130], radius=18, fill=col + (255,), outline=BLACK + (255,), width=6)
                 if p > 0.6: v = c["vals"][i]; paste(fr, v, min(W - v.width / 2 - 10, 90 + bw - v.width / 2 - 14) if bw > v.width + 30 else 90 + bw + v.width / 2 + 10, y + 90, 1, 1)
+        elif fx == "gauge":
+            s, a = slam(t, 0.0, 0.25); paste(fr, c["label"], W / 2, 330, 1, a)
+            d = ImageDraw.Draw(fr); cx, cy, R = W / 2, 900, 320; mx = b["max"]
+            d.arc([cx - R, cy - R, cx + R, cy + R], 180, 360, fill=(255, 255, 255, 70), width=46)
+            p = ease(min(1, t / max(0.4, b.get("roll", 1.0)))); v = b["value"] * p
+            d.arc([cx - R, cy - R, cx + R, cy + R], 180, 180 + 180 * v / mx, fill=(YEL if p >= 1 else CYAN) + (255,), width=46)
+            for m, img in c["marks"]:
+                ang = math.pi * (1 + m / mx); x1, y1 = cx + (R + 40) * math.cos(ang), cy + (R + 40) * math.sin(ang)
+                d.line([(cx + (R - 30) * math.cos(ang), cy + (R - 30) * math.sin(ang)), (x1, y1)], fill=WHITE + (255,), width=8)
+                paste(fr, img, cx + (R + 95) * math.cos(ang), cy + (R + 75) * math.sin(ang), 1, 1)
+            wob = (0.015 * math.sin(t * 40) if p >= 1 else 0); ang = math.pi * (1 + v / mx + wob)
+            d.line([(cx, cy), (cx + (R - 50) * math.cos(ang), cy + (R - 50) * math.sin(ang))], fill=RED + (255,), width=16)
+            d.ellipse([cx - 34, cy - 34, cx + 34, cy + 34], fill=BLACK + (255,), outline=RED + (255,), width=8)
+            txt = fmt_num(v, b.get("dec", 0)) + b.get("suffix", ""); key = ("g", txt)
+            if key not in c: c[key] = glow(simple(txt, 220, YEL if p >= 1 else WHITE, max_w=900), 22, 0.7)
+            paste(fr, c[key], W / 2, 1050, 1.0 + (0.15 * max(0, 1 - (t - b.get("roll", 1.0)) / 0.25) if p >= 1 else 0), 1)
+            if "sub" in c: paste(fr, c["sub"], W / 2, 1200, 1, slam(t, 0.3, 0.3)[1])
+        elif fx == "phone":
+            e = ease(t / 0.35); paste(fr, c["ph"], W / 2, 760 + 400 * (1 - e), 1, min(1, t * 4))
+            n = len(c["msgs"]); span = max(0.4, self.dur - 0.8); y = 470
+            for i, m in enumerate(c["msgs"]):
+                t0 = 0.25 + span * i / n; s, a = slam(t, t0, 0.22)
+                if a > 0: paste(fr, m, W / 2, y + m.height / 2, s, a)
+                y += m.height + 26
         elif fx == "cta":
             s, a = slam(t, 0.0, 0.3); paste(fr, c["star"], W / 2, 430, s, a, rot=int(10 * math.sin(t * 2.5)))
             s, a = slam(t, 0.15); paste(fr, c["name"], W / 2, 700, s, a); paste(fr, c["handle"], W / 2, 820, 1, slam(t, 0.25)[1])
@@ -566,7 +651,7 @@ class Video:
         fr = background(bt.b["scene"], T, t, bt.pin_state)
         fr.alpha_composite(vignette())
         layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        bt.fg(layer, t + ((0.6 if bt.b["fx"] not in ("counter", "bars") else 0.35) if bi == 0 else 0)); bt.caption(layer, max(t, 0.07) if bi == 0 else t)
+        bt.fg(layer, t + ((0.6 if bt.b["fx"] not in ("counter", "bars", "gauge") else 0.35) if bi == 0 else 0)); bt.caption(layer, max(t, 0.07) if bi == 0 else t)
         dx = dy = 0
         if bt.shake_t is not None and t < 0.35:
             k = (1 - t / 0.35) * 18; dx, dy = int(rng.uniform(-k, k)), int(rng.uniform(-k, k))
