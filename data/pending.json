@@ -1,69 +1,128 @@
 {
-  "batch": "2026-11-22",
+  "batch": "2026-11-29",
   "status": "borradores en vidIQ, pendientes del sí de Vic",
-  "commit_videos": "b07ac67804ff8363ceb67b22ad99a5c345e1f89c",
+  "commit_videos": "da5c38440d332338886b9425a8ee000f646b1514",
   "drafts": [
     {
-      "id": "13_ventas",
-      "postId": "12562528-8c05-4517-8d1d-fa07fbfa11e0",
-      "revision": "93335fe2",
-      "publishAt": "2026-11-23T01:00:00Z"
+      "id": "23_60fps",
+      "postId": "278ef8f5-5ff5-4f25-9ebe-1a8584f61272",
+      "revision": "8f7cc6a4",
+      "uploadId": "4b35587c-158a-4572-8def-70d272a2bd36",
+      "publishAt": "2026-11-30T01:00:00Z"
     },
     {
-      "id": "14_dinero",
-      "postId": "75684180-a63d-4e35-b4c0-097ca61b1af5",
-      "revision": "bdd54c16",
-      "publishAt": "2026-11-24T01:00:00Z"
+      "id": "24_record",
+      "postId": "6a69b048-b849-4030-9966-6e6fdf351a25",
+      "revision": "1c9542fd",
+      "uploadId": "86a8f6c0-72a6-4f4a-97d8-75bd19371a78",
+      "publishAt": "2026-12-01T01:00:00Z"
     },
     {
-      "id": "17_secretos",
-      "postId": "e5e3b39f-77bb-4d4a-a63f-d5db735c3253",
-      "revision": "918b5236",
-      "publishAt": "2026-11-25T01:00:00Z"
+      "id": "25_consejos",
+      "postId": "be7f5e57-f444-418e-a24d-79cc6019ae2e",
+      "revision": "bfe7983a",
+      "uploadId": "6cf8ff01-79bf-442c-8bc6-b1a4f8362c05",
+      "publishAt": "2026-12-02T01:00:00Z"
     },
     {
-      "id": "15_radio",
-      "postId": "ccaf1646-0422-481c-bdd9-59426be67434",
-      "revision": "7908e7c1",
-      "publishAt": "2026-11-26T01:00:00Z"
+      "id": "26_pc",
+      "postId": "9b0b8352-29b2-4c1d-83a3-8fbadb426c35",
+      "revision": "cd678530",
+      "uploadId": "e0a23427-4dd0-4d27-b5bc-fe314dbe904d",
+      "publishAt": "2026-12-03T01:00:00Z"
     },
     {
-      "id": "18_misterio",
-      "postId": "d1086998-37bd-46f8-97c8-6c2c07518cb4",
-      "revision": "969d460d",
-      "publishAt": "2026-11-27T01:00:00Z"
+      "id": "27_recortes",
+      "postId": "78d4ad4d-0f93-4938-b1b6-eb97ee89d6f6",
+      "revision": "e87514f2",
+      "uploadId": "80f8ed64-56e1-4262-aaa8-0a1cb0367280",
+      "publishAt": "2026-12-04T01:00:00Z"
     },
     {
-      "id": "16_duracion",
-      "postId": "296d387f-163d-43aa-9edc-976059bb524e",
-      "revision": "0545f3bc",
-      "publishAt": "2026-11-28T01:00:00Z"
+      "id": "28_actores",
+      "postId": "be78cb62-37fa-408b-aeda-f934a9a9dcf1",
+      "revision": "e1ce4e7e",
+      "uploadId": "0936e868-4833-4e9e-8066-476c1207ada8",
+      "publishAt": "2026-12-05T01:00:00Z"
     },
     {
-      "id": "19_trofeos",
-      "postId": "32a3a508-383b-4f66-9a2d-54187be20120",
-      "revision": "8c6a44a2",
-      "publishAt": "2026-11-29T01:00:00Z"
+      "id": "29_pelicula",
+      "postId": "5ec46a64-1706-4997-bc97-3302dc525518",
+      "revision": "3b4c1380",
+      "uploadId": "1fef3e51-4e77-4cea-86de-55ee5dab6152",
+      "publishAt": "2026-12-06T01:00:00Z"
     }
   ],
-  "extra": {
-    "id": "20_festival",
-    "postId": "8951b5eb-f31d-476c-9006-62d9fc12a35c",
-    "revision": "d585a799",
-    "uploadId": "d0c4df67-1958-428a-ba4f-ce05339ea2cf",
-    "commit_video": "02789a988ffd13ec1b160ad7ad03b0e081ffdc52",
-    "publishAt": "2026-11-23T01:00:00Z",
-    "status": "borrador, pendiente del sí de Vic",
-    "noticia": "GTA VI: The Festival en Miami (21/11)"
-  },
-  "extra_2": {
-    "id": "21_parche",
-    "postId": "9d324224-a55f-4a9c-9c14-ed2d897266a0",
-    "revision": "22a83d12",
-    "uploadId": "cf8f47cf-c3e6-4e4f-8b1d-3f230ddbb0cb",
-    "commit_video": "36628969945f16aae627a85483fe7a3a27c4f6ac",
-    "publishAt": "2026-11-25T01:00:00Z",
-    "status": "borrador, pendiente del sí de Vic",
-    "noticia": "Primer parche de GTA 6, 01.002.002 (23/11)"
+  "not_published_previous": {
+    "note": "Lote 2026-11-22 y extras 20/21: nunca aprobados; borradores siguen en vidIQ con fechas pasadas. Para recuperarlos hay que cambiar publishAt con vidiq_social_post_draft_update.",
+    "batch": {
+      "batch": "2026-11-22",
+      "status": "borradores en vidIQ, pendientes del sí de Vic",
+      "commit_videos": "b07ac67804ff8363ceb67b22ad99a5c345e1f89c",
+      "drafts": [
+        {
+          "id": "13_ventas",
+          "postId": "12562528-8c05-4517-8d1d-fa07fbfa11e0",
+          "revision": "93335fe2",
+          "publishAt": "2026-11-23T01:00:00Z"
+        },
+        {
+          "id": "14_dinero",
+          "postId": "75684180-a63d-4e35-b4c0-097ca61b1af5",
+          "revision": "bdd54c16",
+          "publishAt": "2026-11-24T01:00:00Z"
+        },
+        {
+          "id": "17_secretos",
+          "postId": "e5e3b39f-77bb-4d4a-a63f-d5db735c3253",
+          "revision": "918b5236",
+          "publishAt": "2026-11-25T01:00:00Z"
+        },
+        {
+          "id": "15_radio",
+          "postId": "ccaf1646-0422-481c-bdd9-59426be67434",
+          "revision": "7908e7c1",
+          "publishAt": "2026-11-26T01:00:00Z"
+        },
+        {
+          "id": "18_misterio",
+          "postId": "d1086998-37bd-46f8-97c8-6c2c07518cb4",
+          "revision": "969d460d",
+          "publishAt": "2026-11-27T01:00:00Z"
+        },
+        {
+          "id": "16_duracion",
+          "postId": "296d387f-163d-43aa-9edc-976059bb524e",
+          "revision": "0545f3bc",
+          "publishAt": "2026-11-28T01:00:00Z"
+        },
+        {
+          "id": "19_trofeos",
+          "postId": "32a3a508-383b-4f66-9a2d-54187be20120",
+          "revision": "8c6a44a2",
+          "publishAt": "2026-11-29T01:00:00Z"
+        }
+      ],
+      "extra": {
+        "id": "20_festival",
+        "postId": "8951b5eb-f31d-476c-9006-62d9fc12a35c",
+        "revision": "d585a799",
+        "uploadId": "d0c4df67-1958-428a-ba4f-ce05339ea2cf",
+        "commit_video": "02789a988ffd13ec1b160ad7ad03b0e081ffdc52",
+        "publishAt": "2026-11-23T01:00:00Z",
+        "status": "borrador, pendiente del sí de Vic",
+        "noticia": "GTA VI: The Festival en Miami (21/11)"
+      },
+      "extra_2": {
+        "id": "21_parche",
+        "postId": "9d324224-a55f-4a9c-9c14-ed2d897266a0",
+        "revision": "22a83d12",
+        "uploadId": "cf8f47cf-c3e6-4e4f-8b1d-3f230ddbb0cb",
+        "commit_video": "36628969945f16aae627a85483fe7a3a27c4f6ac",
+        "publishAt": "2026-11-25T01:00:00Z",
+        "status": "borrador, pendiente del sí de Vic",
+        "noticia": "Primer parche de GTA 6, 01.002.002 (23/11)"
+      }
+    }
   }
 }

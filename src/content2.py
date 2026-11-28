@@ -364,7 +364,7 @@ VIDEOS2 += [
  dict(id="26_pc", title="¿Cómo jugar GTA 6 en PC? (sin piratear) #Shorts",
   desc="Rockstar no ha anunciado versión de PC de GTA 6 ni fecha. Los 'ports' que circulan son no oficiales y salen de archivos filtrados: el 24 de noviembre de 2026 GitHub publicó una denuncia de Take-Two contra un port no oficial y toda su red de 3.007 repositorios. La vía legal para verlo en tu PC es jugar en remoto desde tu propia consola (PS Remote Play o Xbox Remote Play desde Xbox Series), con tu copia del juego. Fuentes: gta6times (DMCA de GitHub y Xbox Wire) y tbreak.",
   hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #GTA6PC",
-  tags=TAGS0 + ["como jugar gta 6 en pc", "gta 6 pc", "gta 6 pc fecha", "gta 6 port pc", "gta 6 remote play", "gta 6 en pc gratis", "gta 6 pc oficial", "gta 6 take two", "como jugar gta 6 pc"],
+  tags=TAGS0 + ["como jugar gta 6 en pc", "gta 6 pc", "gta 6 pc fecha", "gta 6 port pc", "gta 6 remote play", "gta 6 pc oficial", "gta 6 take two", "como jugar gta 6 pc"],
   beats=[
    dict(say="¿Quieres jugar GTA 6 en PC? Cuidado.", scene="studio", fx="title", text="¿GTA 6 EN *PC*? CUIDADO", sfx="boom"),
    dict(say="Rockstar no ha anunciado versión de PC. Ni fecha.", scene="city", fx="list", items=[("no", "Versión PC"), ("no", "Fecha")], sfx="slam"),
@@ -376,7 +376,7 @@ VIDEOS2 += [
    CTA,
   ]),
  dict(id="27_recortes", title="Lo que Rockstar QUITÓ de GTA 6 (y por qué) #Shorts",
-  desc="Rob Nelson, productor de GTA 6 y codirector de Rockstar North, explicó en entrevistas con VGC y PC Games qué se quedó fuera del juego: los dardos y los bolos ('no nos dio tiempo'), el tenis (estaba planeado pero no les convenció), ir al cine, arrastrarse por el suelo y fabricar objetos. La motosierra aparece en el mundo pero no se puede usar: Nelson dijo que era demasiado para este juego y para Jason y Lucía. Sí hay minigolf, billar y tiros a canasta. Fuentes: VGC y PC Games (vía thegta6news), 19-26 nov 2026.",
+  desc="Rob Nelson, productor de GTA 6 y codirector de Rockstar North, explicó en entrevistas con VGC y PC Games qué se quedó fuera del juego: los dardos y los bolos (según Nelson, no les dio tiempo), el tenis (estaba planeado pero no les convenció), ir al cine, arrastrarse por el suelo y fabricar objetos. La motosierra aparece en el mundo pero no se puede usar: Nelson dijo que era demasiado para este juego y para Jason y Lucía. Sí hay minigolf, billar y tiros a canasta. Fuentes: VGC y PC Games (vía thegta6news), 19-26 nov 2026.",
   hashtags="#GTA6 #GTAVI #GTA6Español #Shorts #GTA6Curiosidades",
   tags=TAGS0 + ["gta 6 curiosidades", "gta 6 contenido cortado", "gta 6 motosierra", "gta 6 dardos", "gta 6 bolos", "gta 6 minigolf", "gta 6 rob nelson", "gta 6 actividades", "gta 6 secretos"],
   beats=[
